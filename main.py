@@ -10,7 +10,7 @@ for list in checkThese:
         currentUnit = None
         toAdd = ""
         for line in list_file:
-            if line == "\n":
+            if line == "\n" and currentUnit != None:
                 if toAdd in gscUnits[currentUnit]:
                     gscUnits[currentUnit][toAdd] = gscUnits[currentUnit][toAdd] + 1
                 else:
